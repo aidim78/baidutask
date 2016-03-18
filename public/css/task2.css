@@ -11,25 +11,37 @@
             height: 55px;
             width: 100%;
             padding: 10px;
-            background-color:#443636 ;
+            background-color:#282828 ;
             background-image: url("../img/logo.jpg");
             background-repeat: no-repeat;
             background-position: 40px;
+
             
         }
         header nav ul{
-
+          
             float: right;
+             
         }
         header nav ul li{
             margin: 0 5px;
             display: inline;
-            list-style-type: disc;
-            list-style-position:outside; 
+            list-style-type:disc;
+           
+        }
+        header nav ul li:before{
+            
+            display: list-item;
+            list-style-type:disc; 
+           
+        }
+        header nav ul li:before{
+           content: 
         }
         header nav ul li a{
             text-decoration: none;
             color:white;
+
         }
         header nav ul li a:hover{
             color:gray;
