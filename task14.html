@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+    <style>
+        ul{
+            border: 1px solid #ccc;
+            padding-left: 0;
+
+        }
+        li{
+            width: 150px;
+            padding: 5px ;
+            color: white;
+            list-style-position:inside;
+        }
+        li *{
+            margin: 0 auto;
+        }
+        li:nth-child(2n){
+            background-color: #1B68B8;
+        }
+        li:nth-child(2n+1){
+            background: #b92c28;
+        }
+    </style>
+</head>
+<body>
+
+<h3>污染城市列表</h3>
+<select name="" id="listdisplay">
+    <option value="filter">过滤大于60的城市</option>
+    <option value="sort">从高到低排列</option>
+    <option value="reversesort">从低到高排列</option>
+</select>
+<ol id="aqi-list">
+
+</ol>
+
+<script type="text/javascript">
+
+    var aqiData = [
+        ["北京", 90],
+        ["上海", 50],
+        ["福州", 10],
+        ["广州", 50],
+        ["成都", 90],
+        ["西安", 100]
+    ];
+
+    (function () {
+
+        /*
+         在注释下方编写代码
+         遍历读取aqiData中各个城市的数据
+         将空气质量指数大于60的城市显示到aqi-list的列表中
+         */
+        /*
+        * 这题的过滤可使用Array.filter()对数组进行预处理
+        *
+        *
+        * */
+        var select = document.getElementById('listdisplay');
+        if(document.addEventListener){
+            select.addEventListener('change',showWeather,false);
+        }
+        else if(document.attachEvent){
+
+            select.attachEvent('onchange',showWeather);
+        }else{
+            select.onchange = showWeather;
+        }
+        function showWeather(){
+            var value = select.value;
+            var filterlist = aqiData.filter(function(x){return x[1] >= 60;});
+            var sortlist = aqiData.sort(function(x,y){return x[1] - y[1];});
+            switch(value){
+
+                case "sort" : display(sortlist.reverse());
+                    break;
+                case "reversesort" : display(sortlist);
+                    break;
+                case "filter" :
+                default :
+                    display(filterlist);
+                    break;
+            }
+        }
+
+        function display(listarray) {
+            var list = document.getElementById('aqi-list');
+            list.innerHTML = "";
+            for (var i in listarray) {
+                var data = listarray[i];
+                var li = document.createElement('li');
+                li.innerHTML = data[0]+ " 天气质量:" + data[1];
+                list.appendChild(li);
+            }
+        }
+
+    })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/*.parent {*/
+    /*display:flex;*/
+    /*flex-flow: row wrap;*/
+    /*align-items: stretch;*/
+    /*justify-content: center;*/
+    /*width: 300px;*/
+    /*height: 200px;*/
+    /*border: 1px solid #b92c28;*/
+/*}*/
+
+/*.child{*/
+    /*flex:0 30%;*/
+    /*margin: 5px;*/
+    /*border: 1px dotted skyblue;*/
+/*}*/
+/*/!*[class|=child]{*!/*/
+    /*/!*background-color: #67b168;*!/*/
+/*/!*}*!/*/
+/*/!*[class*=child]{*!/*/
+/*/!*font-weight: bolder;*!/*/
+/*/!*}*!/*/
+/*/!*[class~=child]{*!/*/
+    /*/!*font-size: x-large;*!/*/
+/*/!*}*!/*/
+/*div + p{*/
+    /*font-size: 10px;*/
+/*}*/
+
+/*div ~ p{*/
+    /*background-color: #1B68B8;*/
+/*}*/
+
+::selection{
+    font-size: x-small;
+    text-decoration: underline;
+}

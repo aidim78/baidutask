@@ -2,9 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>flex弹性布局</title>
+    <style>
+        *{
+            padding: 20px;
+        }
+        html,body{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            display: flex;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        @media (max-width: 640px) {
+            .container{
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-content:space-between ;
+
+            }
+            .child4{
+                order: -1;
+            }
+        }
+
+        @media(min-width:640px ){
+            .container{
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        [class*="child"]{
+            border:1px solid red ;
+            flex:0 1 150px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        .child1{
+            height: 120px;
+        }
+        .child2{
+            height: 100px;
+        }
+        .child3{
+            height: 40px;
+        }
+        .child4{
+            height: 200px;
+            border: 1px solid blue;
+        }
+
+    </style>
 </head>
 <body>
-
+    <div class="container">
+        <section class="child1 item">1</section>
+        <section class="child2 item">2</section>
+        <section class="child3 item">3</section>
+        <section class="child4 item">4</section>
+    </div>
 </body>
 </html>

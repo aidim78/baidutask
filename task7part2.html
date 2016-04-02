@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./public/css/task5.css" >
+    <title>任务七</title>
+    <style>
+        html,body{
+            min-width: 1333px;
+           font-size: 14px;
+            background: none;
+        }
+        .search{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 500px;
+            background: url('public/img/newworld.jpeg') no-repeat ;
+            background-size:100%;
+
+        }
+        .searchheader{
+            text-align: center;
+            margin: 20px;
+            color: #613A3A;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        .searchcontent{
+            display: flex;
+            justify-content: center;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        form{
+            display: flex;
+        }
+        .searchcontent .select{
+            display: inline-block;
+            width: 250px;
+            height: 40px;
+            margin-right:20px ;
+            overflow: hidden;
+            background: url('public/img/arrow.png') no-repeat right white;
+            background-size:40px 40px ;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        div.select>select{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: 1px solid #999;
+            background: transparent;
+            padding: 3px;
+            width: 250px;
+            height: 40px;
+            color: #999;
+            font-size: 16px;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        select option{
+            background: #C5B9B9;
+            
+        }
+        select>option:hover{
+            background-color: #cc3e41;
+        }
+
+        .searchcontent button{
+            width: 250px;
+            height: 35px;
+            color: #fff;
+            background: #cc3e41;
+            text-align: center;
+            font-size: 17px;
+            font-family: "Microsoft Yahei", sans-serif;
+
+        }
+        .display {
+            display: flex;
+            height: 750px;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        .item {
+            display:flex ;
+            flex-direction: column;
+            width: 333px;
+            margin: 0 -30px;
+            align-items: center;
+            border: none;
+
+        }
+        .item img{
+            padding: 5px;
+            border: 1px solid #C5B9B9;
+        }
+
+        .subinfo{
+            text-align: center;
+            color: #6B6464;
+        }
+        .info{
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<section class="search">
+   <div class="searchheader">
+       <h1>查找新世界城市活动信息</h1>
+       <p> 每个城市的有不同的活动信息，请自主查询你所需要了解的城市</p>
+   </div>
+    <div class="searchcontent">
+        <form action="#" method="get">
+            <div class="select">
+        <select name="country" id="country" >
+            <option value="1">中国</option>
+            <option value="2">美国</option>
+            <option value="3">韩国</option>
+            <option value="4">法国</option>
+        </select>
+            </div>
+            <div class="select">
+                <select name="province" id="province"  >
+                    <option value="北京市">北京市</option>
+                    <option value="天津市">天津市</option>
+                    <option value="河北省">河北省</option>
+                    <option value="陕西省">陕西省</option>
+                </select>
+            </div>
+            <div class="select">
+                <select name="city" id="city"  >
+
+                    <option value="**">西安</option>
+                    <option value="**">宝鸡</option>
+                    <option value="**">南京</option>
+                </select>
+            </div>
+            <div>
+             <button type="submit"> <span>搜&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp索</span></button>
+            </div>
+    </div>
+    </form>
+</section>
+<section class="display">
+<div class="item">
+    <img src="public/img/p1.png" alt="北京"/>
+
+    <div class="displayinfo">
+        <p class="info">北京活动</p>
+        <p class="subinfo">新社区大联盟</p>
+    </div>
+</div>
+<div class="item">
+        <p style="letter-spacing: 1.5em;font-size: 24px;font-weight: 500;margin: 0 0 0 1em">上海活动</p>
+        <p class="subinfo">夜上海新景观探索</p>
+    <img src="public/img/p2.png" alt="上海"/>
+</div>
+<div class="item"><img src="public/img/p3.png" alt="深圳"/>
+
+    <div class="displayinfo">
+        <p class="info">深圳活动</p>
+        <p class="subinfo">全新海岸线观点站</p>
+    </div>
+</div>
+<div class="item"><img src="public/img/p4.png" alt="香港"/>
+
+    <div class="displayinfo">
+        <p class="info">香港活动</p>
+        <p class="subinfo">奢侈消费大派送</p>
+    </div>
+</div>
+
+
+</section>
+</body>
+</html>

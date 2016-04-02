@@ -2,9 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./public/css/task5.css" >
+
+    <title>任务六</title>
+
+    <style>
+       .item1{
+           width: 641px;
+           height: 301px;
+           padding: 0px;
+           margin: 20px;
+           overflow: hidden;
+           background-image:url("public/img/海贼王.jpg");
+       }
+        .fontground{
+            z-index: -1;
+            width: 191px;
+            height: 301px;
+            opacity: .8;
+        }
+        .colorleft{
+            background-color: #75b86b;
+            float: left;
+        }
+       .colorright{
+           background-color: #cc7680;
+           float: right;
+       }
+        .item2{
+            display: flex;
+            justify-content: space-between;
+            width: 641px;
+            margin: 20px;
+            font-size: 12px;
+            font-family: "Microsoft Yahei",sans-serif;
+            opacity: .7;
+            line-height: 16px;
+        }
+        .news{
+            flex: 1;
+            padding-right: 10px;
+            margin-right: 10px;
+        }
+        .title{
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: underline;
+        }
+        .percent{
+            color: #cd4a48;
+            font-style:italic;
+        }
+    </style>
 </head>
 <body>
-
+<artice class="picnews">
+    <section class="item1">
+        <div class="fontground colorleft"></div>
+        <div class="fontground colorright"></div>
+    </section>
+    <section class="item2">
+        <article class="news">
+            <h1 class="title" style="color: #75b86b;">What</h1>
+            <p>The need for the calculation of a path, from a source
+                node to a target node, which must visit a given set of nodes
+                may arise due to network management constraints. An ILP
+                formulation [8] for solving this problem was adapted to
+                include the restriction that the obtained solution must have a
+                node-disjoint red backup path. This type of fixed route can
+                be implemented in a number of network technologies and
+                protocol layers such as, Internet Protocol (IP) networks with</p>
+        </article>
+        <article class="news">
+           <h1 class="title" style="color: #d2994f">When</h1>
+            <p>
+                The need for the calculation of a path, from a source
+                node to a target node, which must visit a given set of nodes
+                may arise due to network management constraints. An ILP
+                formulation [8] for solving this problem was adapted to
+                include the restriction that the obtained solution must have a
+                node-disjoint red backup path. This type of fixed route can
+                be implemented in a number of network technologies and
+                protocol layers such as, Internet Protocol (IP) networks with
+            </p>
+        </article>
+        <article class="news">
+            <h1 class="title" style="color:#cc7680">How</h1>
+            <p>
+                he need for the calculation of a path, from a source
+                node to a target node, which must visit a given set of nodes
+                may arise due to network management constraints. An ILP
+                <p style="text-align: center">
+                What---------<span class="percent">40%</span><br/>
+                What---------<span class="percent">30%</span><br/>
+                What---------<span class="percent">30%</span><br/>
+                </p>
+            </p>
+        </article>
+    </section>
+</artice>
 </body>
 </html>
