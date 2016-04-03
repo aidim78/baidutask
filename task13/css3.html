@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @-webkit-keyframes carousel {
+            0%{
+                left:0 ;
+                visibility: visible;
+            }
+            /*7.5%{*/
+                /*left: -25%;*/
+                /*z-index: 1;*/
+            /*}*/
+            /*15%{*/
+                /*left: -50%;*/
+                /*z-index: 1;*/
+                /*/!*height: 50%;*!/*/
+                /*/!*-webkit-transform: rotate(120deg);*!/*/
+                /*/!*-moz-transform: rotate(120deg);*!/*/
+                /*/!*-ms-transform: rotate(120deg);*!/*/
+                /*/!*-o-transform: rotate(120deg);*!/*/
+                /*/!*transform: rotate(120deg);*!/*/
+                /*visibility: visible;*/
+            /*}*/
+            /*22.5%{*/
+                /*left: -75%;*/
+                /*z-index: 1;*/
+                /*/!*height: 75%;*!/*/
+                /*/!*-webkit-transform: rotate(240deg);*!/*/
+                /*/!*-moz-transform: rotate(240deg);*!/*/
+                /*/!*-ms-transform: rotate(240deg);*!/*/
+                /*/!*-o-transform: rotate(240deg);*!/*/
+                /*/!*transform: rotate(240deg);*!/*/
+                /*visibility: visible;*/
+            /*}*/
+            /*30%{*/
+                /*left: -100%;*/
+                /*z-index: 1;*/
+                /*/!*height:100% ;*!/*/
+                /*/!*-webkit-transform: rotate(360deg);*!/*/
+                /*/!*-moz-transform: rotate(360deg);*!/*/
+                /*/!*-ms-transform: rotate(360deg);*!/*/
+                /*/!*-o-transform: rotate(360deg);*!/*/
+                /*/!*transform: rotate(360deg);*!/*/
+                /*visibility: visible;*/
+            /*}*/
+            33.33%{
+                left: -100%;
+                visibility: hidden;
+
+            }
+            100%{
+                left: -100%;
+                visibility: hidden;
+
+            }
+        }
+        @-webkit-keyframes carousel2 {
+            0%{
+                left:0 ;
+                z-index: 1;
+                visibility: visible;
+            }
+            /*7.5%{*/
+            /*left: -25%;*/
+            /*z-index: 1;*/
+            /*}*/
+            /*15%{*/
+            /*left: -50%;*/
+            /*z-index: 1;*/
+            /*/!*height: 50%;*!/*/
+            /*/!*-webkit-transform: rotate(120deg);*!/*/
+            /*/!*-moz-transform: rotate(120deg);*!/*/
+            /*/!*-ms-transform: rotate(120deg);*!/*/
+            /*/!*-o-transform: rotate(120deg);*!/*/
+            /*/!*transform: rotate(120deg);*!/*/
+            /*visibility: visible;*/
+            /*}*/
+            /*22.5%{*/
+            /*left: -75%;*/
+            /*z-index: 1;*/
+            /*/!*height: 75%;*!/*/
+            /*/!*-webkit-transform: rotate(240deg);*!/*/
+            /*/!*-moz-transform: rotate(240deg);*!/*/
+            /*/!*-ms-transform: rotate(240deg);*!/*/
+            /*/!*-o-transform: rotate(240deg);*!/*/
+            /*/!*transform: rotate(240deg);*!/*/
+            /*visibility: visible;*/
+            /*}*/
+            /*30%{*/
+            /*left: -100%;*/
+            /*z-index: 1;*/
+            /*/!*height:100% ;*!/*/
+            /*/!*-webkit-transform: rotate(360deg);*!/*/
+            /*/!*-moz-transform: rotate(360deg);*!/*/
+            /*/!*-ms-transform: rotate(360deg);*!/*/
+            /*/!*-o-transform: rotate(360deg);*!/*/
+            /*/!*transform: rotate(360deg);*!/*/
+            /*visibility: visible;*/
+            /*}*/
+            33.33%{
+                left: -100%;
+                visibility: hidden;
+                z-index: 1;
+            }
+            100%{
+                left: -100%;
+                visibility: hidden;
+                z-index: 1;
+            }
+        }
+        @-webkit-keyframes carousel3 {
+            0%{
+                left:0 ;
+                z-index: 1;
+                visibility: visible;
+            }
+            /*7.5%{*/
+            /*left: -25%;*/
+            /*z-index: 1;*/
+            /*}*/
+            /*15%{*/
+            /*left: -50%;*/
+            /*z-index: 1;*/
+            /*/!*height: 50%;*!/*/
+            /*/!*-webkit-transform: rotate(120deg);*!/*/
+            /*/!*-moz-transform: rotate(120deg);*!/*/
+            /*/!*-ms-transform: rotate(120deg);*!/*/
+            /*/!*-o-transform: rotate(120deg);*!/*/
+            /*/!*transform: rotate(120deg);*!/*/
+            /*visibility: visible;*/
+            /*}*/
+            /*22.5%{*/
+            /*left: -75%;*/
+            /*z-index: 1;*/
+            /*/!*height: 75%;*!/*/
+            /*/!*-webkit-transform: rotate(240deg);*!/*/
+            /*/!*-moz-transform: rotate(240deg);*!/*/
+            /*/!*-ms-transform: rotate(240deg);*!/*/
+            /*/!*-o-transform: rotate(240deg);*!/*/
+            /*/!*transform: rotate(240deg);*!/*/
+            /*visibility: visible;*/
+            /*}*/
+            /*30%{*/
+            /*left: -100%;*/
+            /*z-index: 1;*/
+            /*/!*height:100% ;*!/*/
+            /*/!*-webkit-transform: rotate(360deg);*!/*/
+            /*/!*-moz-transform: rotate(360deg);*!/*/
+            /*/!*-ms-transform: rotate(360deg);*!/*/
+            /*/!*-o-transform: rotate(360deg);*!/*/
+            /*/!*transform: rotate(360deg);*!/*/
+            /*visibility: visible;*/
+            /*}*/
+            33.33%{
+                left: -100%;
+                visibility: hidden;
+                z-index: 1;
+            }
+            100%{
+                left: -100%;
+                visibility: hidden;
+                z-index: 1;
+            }
+        }
+        .table{
+            margin-left: 40px;
+        }
+        .table table{
+            border-collapse: collapse;
+            text-align: left;
+        }
+        .table tr>th{
+            color: #fff;
+            background: black;
+        }
+        td,th{
+            border: 1px solid white;
+        }
+        .rank{
+            color: red;
+        }
+        tbody tr:nth-child(2n){
+            background-color: #8c8c8c;
+        }
+
+        input{
+            width: 100px;
+            display: block;
+            margin:  20px 40px;
+
+        }
+        input:focus{
+            /*-webkit-animation: sizegrow 2s ;*/
+            -webkit-transition: width 1s;
+            border-color:deepskyblue ;
+            width: 200px;
+        }
+        .lunbo{
+            width: 90%;
+            min-width: 700px;
+            height: 400px;
+            position: relative;
+
+        }
+        .lunbo img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .lunbo ul{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 0;
+            list-style: none;
+            z-index: 2;
+        }
+        .lunbo ul li{
+            width: 30px;
+            height: 30px;
+            margin: 3px;
+            color: white;
+            display: inline-block;
+            background-color: rgba(161, 162, 162, 0.89);
+            text-align: center;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+        #picture1{
+            -webkit-animation: carousel 12s 0s infinite;
+            -o-animation: carousel 12s 0s infinite;
+            animation: carousel 12s 0s infinite;
+            z-index: 1;
+
+        }
+        #picture2{
+            -webkit-animation: carousel 12s 4s infinite  ;
+            -o-animation: carousel 12s 4s infinite ;
+            animation: carousel 12s 4s infinite ;
+            z-index: -1;
+
+        }
+        #picture3{
+            -webkit-animation: carousel 12s 8s infinite ;
+            -o-animation: carousel 12s 8s infinite ;
+            animation: carousel 12s 8s infinite ;
+            z-index: -2;
+        }
+        /*#img:target, #picture2:target, #picture3:target {*/
+            /*z-index: 1;*/
+            /*left: 0;*/
+            /*transition: z-index 2s ,left 2s;*/
+            /*/!*visibility: visible;*!/*/
+            /*/!*-webkit-animation: none;*!/*/
+            /*/!*-o-animation: none;*!/*/
+            /*/!*animation: none;*!/*/
+        /*}*/
+
+        .lunbo li a{
+            text-decoration: none;
+        }
+
+    </style>
+    <title>css3学习</title>
+</head>
+<body>
+<main>
+    <section class="table">
+        <table>
+            <thead>
+            <tr>
+                <th>排名</th>
+                <th>网站</th>
+                <th>热度</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="rank">
+                <td>1</td>
+                <td>百度前端技术学院</td>
+                <td>13000</td>
+            </tr>
+            <tr class="rank">
+                <td>2</td>
+                <td>百度前端技术学院</td>
+                <td>12000</td>
+            </tr>
+            <tr class="rank">
+                <td>3</td>
+                <td>百度前端技术学院</td>
+                <td>11000</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>百度前端技术学院</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>百度前端技术学院</td>
+                <td>9000</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>百度前端技术学院</td>
+                <td>8000</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>百度前端技术学院</td>
+                <td>7000</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>百度前端技术学院</td>
+                <td>6000</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>百度前端技术学院</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>百度前端技术学院</td>
+                <td>4000</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="form-control">
+        <input type="text" placeholder="正常状态"/>
+        <input type="text" placeholder="焦点状态" autofocus/>
+    </section>
+    <section >
+        <div class="lunbo" >
+            <ul>
+                <li><a href="#img1" id="p1">1</a></li>
+                <li><a href="#img2" id="p2">2</a></li>
+                <li><a href="#img3" id="p3">3</a></li>
+            </ul>
+            <div class="imgcontaner">
+            <div>
+                <img src="public/img/luffy.jpg" alt="1" id="picture1" />
+                <img src="public/img/海贼王.jpg" alt="2" id="picture2"/>
+                <img src="public/img/newworld.jpeg" alt="3" id="picture3"/>
+            </div>
+            <div id="img">
+
+            </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
