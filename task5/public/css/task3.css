@@ -1,0 +1,46 @@
+body, .row ,.box {
+    box-sizing: border-box;
+    border: 1px solid #999;
+    background-color: #eee;
+    padding: 20px;
+}
+.box{
+    display: flex;
+    justify-content: space-around;
+
+}
+.row{
+    display: flex;
+
+
+}
+.row.team{
+    flex:0 0 200px;
+    height: 120px;
+    justify-content: space-around;
+
+}
+.teamitem{
+
+
+}
+img.teamitem{
+    width: 80px;
+    height: 80px;
+}
+.row.introduction{
+    flex:auto;
+}
+.row.img{
+    flex:0 0 120px;
+    flex-direction: column;
+
+}
+.imgitem{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+.img:nth-child(4){
+    margin-bottom:0px;
+}
