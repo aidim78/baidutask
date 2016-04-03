@@ -1,0 +1,41 @@
+/*commen*/
+body{ background-color: #e0e0e0; margin: 0; padding: 0; }
+a{ text-decoration: none;  }
+
+/*header*/
+.header{ width:100%; height: 60px; margin: -20px; background-color: #383838;}
+.header nav span{ float: left; margin: 5px 25px; }
+.header nav ul li{ float: right; margin: 10px; line-height: 50px; }
+.nav-bar a:link,.nav-bar a:visited{ color: white; }
+.nav-bar a:hover,.nav-bar a:active{ color: #ccc; }
+
+
+/*content*/
+.content-main{ float: left; width: 96%; margin: 0 20px; }
+  .content-main .blocker{ margin-top: 20px; border:1px solid #ccc; box-shadow: 2px 2px 1px #aaa; background-color: white;  }
+  .content-main .article-1{width: 100%; }
+  .content-main .i-author{ font-size: 15px; color: dimgray;}
+/*article*/
+  article .arc-content{ width: 97%; margin: 30px 15px; }
+    .title-2{ font-size: 20px; color:gray; }
+    .article-2 li{ list-style: none; }
+  .article-img figure{ width: 120px; border:1px solid #ccc; padding: 5px; text-align: center; font-size: 15px; }
+  .article-img img{ width: 100px; height: 80px; margin: 8px; }
+  .article-3 li{ list-style:decimal; }
+  .article-3 table{ width: 100%; border:1px solid #bbb; border-spacing:0; font-size: 15px; }
+
+    .t-table .t-header{ background-color: #282828; color: #fff; }
+    .t-table tr{ height: 30px; }
+    .t-table th,.t-table td{ border:1px solid #bbb; padding-left: 5px; }
+    .t-table .t-footer{ background-color: #bbb; color: #000; padding-left: 0; font-weight: 600; }
+
+/*aside*/
+.side-bar{ width: 96%; float: left; margin: 20px 20px; border:1px solid #ccc; box-shadow: 2px 2px 1px #aaa; background-color: white; }
+  .side-bar .side-span{ display: block; width: 95%; height: 40px; margin: 20px; border-left: 3px solid #ccc; padding-left: 10px; line-height: 40px; font-size: 15px; }
+  .form-main .form-inp{ width: 600px; margin: 5px 25%; }
+  .form-main span{ float: left; width: 200px; margin-right: 15px; text-align: right; }
+  .form-main p{ width: 200px; margin-top:0; margin-left: 215px; color: #ccc; font-size: 15px}
+  .form-main .form-submit{ width: 95%; height: 40px; background-color: #3553cf; margin: 15px; border: 0; border-radius: 10px; font-size:20px;  color:white;  }
+
+/*footer*/
+footer{ display: block; float: left; width: 100%; height: 60px; background-color: #282828; color: white; text-align: center;}
