@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task18</title>
+    <style>
+       html,body{
+           margin:0;
+           padding: 0;
+           font-size: 14px;
+       }
+        #aqi-queue td{
+            margin: 5px;
+            padding: 8px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: white;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div>
+    <input type="text" pattern="^\d+$"/>
+        <span id="buttongrp">
+            <button id="leftin">左侧进</button>
+            <button id="rightin">右侧进</button>
+            <button id="leftout">左侧出</button>
+            <button id="rightout">右侧出</button>
+        </span>
+    </div>
+    <table id="aqi-queue">
+        <tbody>
+        <tr></tr>
+        </tbody>
+    </table>
+</main>
+<script>
+
+window.onload = function(){
+    var queue = [];//用于存放数据的数组；
+    /*
+    validate(data)用于验证输入。
+     */
+    function validate(data){
+        return /^\d+$/.test(data);
+    }
+    /*
+    clickHanlde 用于四个button的处理事件
+     */
+    function btnHandle(e){
+        var e = e||window.event;
+        var target = e.target|| e.srcElement;
+        var value = document.querySelector('input[type="text"]').value;
+        if(!validate(value))
+        {
+            alert("请输入数字");
+            return;
+        }
+        var id = target.id;
+        switch (id){
+            case "leftin":queue.unshift(value); displayQueue();break;
+            case "rightin":queue.push(value);displayQueue();break;
+            case "leftout":var leftout = queue.shift();displayQueue();alert(leftout);break;
+            case "rightout":var rightout = queue.pop(); displayQueue();alert(rightout);break;
+        }
+    }
+    /*
+    displayQueue:用于展示数据。
+    有两种方法，第一种就是通过获取所有输入的数据，经过操作后，整体显示.这种比较浪费，需要每次都重新渲染。
+    第二种方法是每来一个数据判断其位置，然后在相应的位置进行操作
+    对于左侧添加：使用 parentNode.insertBefore(newNode,parentNode.firstChild);
+    对于右侧添加 使用 parentNode.appendChild(newNode);
+    左侧移除： 使用 parentNode.removeChild(parentNode.firstChild);
+    右侧移除： 使用 parentNode.removeChild(parentNode.lastChild);
+    只需要在原来的基础上渲染就行。具体的代码就不写了。
+     */
+    function displayQueue(){
+        var row = document.querySelector("#aqi-queue tr:only-of-type");
+        row.innerHTML = "";
+        for(var i in queue){
+            var td = document.createElement('td');
+            td.innerText = queue[i];
+            row.appendChild(td);
+        }
+    }
+    function initButton(){
+//        var buttons = document.querySelectorAll('button');
+//        for(var i = 0;i <buttons.length;i++){
+//            buttons[i].addEventListener('click',clickHandle,false);
+//        }
+        var btngrp = document.querySelector('#buttongrp');
+        if(btngrp.addEventListener){
+            btngrp.addEventListener('click',btnHandle,false);
+        }else if(btngrp.attachEvent){
+            btngrp.attachEvent('onclick',btngrp);
+        }else{
+            btngrp.onclick = btnHandle;
+        }
+
+    }
+    function tdHandle(e){
+        var e = e||window.event;
+        var target = e.target|| e.srcElement;
+        target.parentNode.removeChild(target);
+    }
+   function initTd(){
+
+       var table = document.querySelector('#aqi-queue');
+       if(table.addEventListener){
+           table.addEventListener('click',tdHandle,false);
+       }else if(table.attachEvent){
+           table.attachEvent('onclick',tdHandle);
+       }else{
+           table.onclick = tdHandle;
+       }
+
+   }
+    initButton();
+    initTd();
+
+};
+</script>
+</body>
+</html>
